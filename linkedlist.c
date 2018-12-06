@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "linkedlist.h"
+
 
 typedef struct linknd {
 	int data;
@@ -50,8 +52,37 @@ void addTail(int value) //링크드 리스트에 추가할 내용을 받는다.
 	}
 	
  } 
+ 
+ 
+ //포인터만 선언했을 뿐 실체가 아직 없음->만들어 줘야한다
+ //list의 실체 만들기 
+ //헤더 노드 만들기  
+void genList(void){
+ 	list = create_node(0);
+ 	return;
+} 
+
+	void print_list(int n){
+	linknd_t *ndPtr;
+	int i = 0;
+	
+	ndPtr= (linknd_t*)list->next;   //명시적 형변환  
+	
+	while(ndPtr != NULL)
+	{
+		i++;
+		if(i==n)
+		{
+			printf("%i-th value : %i\n",i, ndPtr->data);
+			break;
+		}
+		
+
+		ndPtr = ndPtr -> next;
+	}	
 
 
+}
 
 
 
