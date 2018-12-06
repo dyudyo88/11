@@ -1,9 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
 
-typedef struct linknd {
-	int data;
+int main()
+{
 	
-	void *next; // *next 가리키는 대상은 구조체이다. 
-	//struct linked *next
-}linknd_t;
-
-linknd_t nd;
+	return 0;
+}
